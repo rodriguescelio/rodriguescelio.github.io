@@ -1,0 +1,30 @@
+{% if page.hello %}
+<div id="particles"></div>
+{% endif %}
+
+<header>
+    <nav>
+        <div class="nav-wrapper container">
+            <ul class="right">
+                <li><a class="active" href="/">Home</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    {% if page.hello %}
+    <div class="container hello">
+        <div class="left animated bounceInLeft">
+            <h1>I’m Celio Rodrigues</h1>
+            <h5>Introduction</h5>
+            <a href="/contact" class="btn-large">Contact me</a>
+        </div>
+        <div class="right animated bounceInRight">
+            <img src="/assets/image/rodriguescelio.jpg" width="250" height="250" />
+        </div>
+    </div>
+    {% endif %}
+
+</header>
