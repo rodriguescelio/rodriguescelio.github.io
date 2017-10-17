@@ -7,17 +7,14 @@
     font-family: 'Work Sans', sans-serif;
 }
 
-#particle {
-    position: absolute;
-    width: 100%;
+html, body {
     height: 100%;
 }
 
-header {    
-    position: absolute;
-    width: 100%;
-    top: 0;
+header {
     nav {
+        position: fixed;
+        z-index: 2;
         background: none;
         box-shadow: none;
         a {
@@ -32,22 +29,70 @@ header {
             }
         }
     }
-    .hello {
-        padding-top: 100px;
-        h1 {
-            color: #000;
-            margin-bottom: 30px;
-            font-size: 55px;
+}
+
+.hello {
+    width: 100%;
+    min-height: 95%;
+    background: #deecdf;
+    padding-top: 100px;
+    padding-bottom: 5%;
+
+    img {
+        border-radius: 100px;
+        border: solid 4px #cdcdcd;
+        margin-top: 20px;
+    }
+    h1 {
+        color: #000;
+        margin-bottom: 30px;
+        font-size: 55px;
+    }
+    h5 {
+        color: #7b7b7b;
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+    & + .fixed-container {
+        padding: 80px 0;
+    }
+}
+
+.fixed-container {
+    max-width: 700px;
+    margin: 0 auto;
+    p {
+        font-size: 20px;
+        line-height: 36px;
+        color: #3b3b3b;
+        text-align: justify;
+        
+        &.message {
+            display: none;
+            background: #66bb6a;
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
         }
-        h5 {
-            color: #7b7b7b;
-            margin-bottom: 40px;
-            font-size: 18px;
+    }
+    a {
+        border-bottom: 2px solid rgba(0, 0, 0, .4);
+        color: #3b3b3b;
+        text-decoration: none;
+        transition: border .3s ease-in-out;
+        &:hover {
+            border-bottom: 2px solid rgba(0, 0, 0, .1);
         }
-        img {
-            border-radius: 125px;
-            border: solid 6px #cdcdcd;
-            margin-top: 20px;
-        }
+    }
+    a.back {
+        font-size: 35px;
+        border: none;
+        color: #A2A2A2;
+        padding: 0 .75rem;
+    }
+    &.box-center {
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 }
