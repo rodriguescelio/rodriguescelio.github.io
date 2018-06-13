@@ -11,70 +11,197 @@ html, body {
     height: 100%;
 }
 
-header {
-    nav {
-        position: fixed;
-        z-index: 2;
-        background: none;
-        box-shadow: none;
-        a {
-            color: #969292;
-            transition: .5s;
-            &:hover, &.active {
-                color: #000;
-                background: none;
-            }
-            &.active:hover {
+body {
+    background: #fafafa;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+nav {
+    display: inline-block;
+    width: 100%;
+    ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            display: inline-block;
+            line-height: 64px;
+            height: 64px;
+            a {
+                padding: 0 15px;
                 color: #969292;
+                transition: .25s;
+                text-decoration: none;
+                &:hover, &.active {
+                    color: #000;
+                }
+                &.active:hover {
+                    color: #969292;
+                }
             }
         }
     }
 }
 
-.hello {
+.card {
+    display: inline-block;
     width: 100%;
-    min-height: 95%;
-    background: #deecdf;
-    padding-top: 100px;
-    padding-bottom: 5%;
+    background: #ffffff;
+    margin: .5rem 0 1rem 0;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    padding: 5%;
+    margin-bottom: 50px;
+}
+
+.home-card {
+    margin-top: 100px;
+    .profile, .info, .about {
+        display: inline-block;
+        vertical-align: middle;
+        width: 33%;
+    }
+
+    .profile img {
+        width: 70%;
+        border-radius: 50%;
+    }
+
+    .info {
+        h1 {
+            letter-spacing: 1px;
+            color: #101010;
+            margin: 0;
+        }
+        h4 {
+            margin: 0;
+            margin-top: 10px;
+            color: #bdbcbc;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+        span {
+            display: inline-block;
+            width: 100%;
+            margin: 50px 0;
+            color: #bdbcbc;
+            letter-spacing: 1px;
+        }
+        .networks {
+            display: inline-block;
+            width: 100%;
+            a {
+                color: #a5a5a5;
+                font-size: 2.3em;
+                margin-right: 22px;
+                &:hover {
+                    &.facebook {
+                        color: #4267b2;
+                    }
+                    &.twitter {
+                        color: #1da1f2;
+                    }
+                    &.instagram {
+                        color: #8a3ab9;
+                    }
+                    &.linkedin {
+                        color: #0576b5;
+                    }
+                    &.github {
+                        color: #313131;
+                    }
+                }
+            }
+        }
+    }
+
+    .about p {
+        font-size: 14px;
+        color: #3b3b3b;
+        line-height: 26px;
+        text-align: justify;
+    }
+}
+
+.posts {
+    padding-top: 3%;
+
+    h1 {
+        margin: 0;
+        color: #3f3d3e;
+        font-weight: bold;
+    }
+
+    section {
+        width: 100%;
+        margin-top: 20px;
+        article {
+            display: inline-block;
+            margin: 10px 2.26%;
+            height: 200px;
+            width: 30%;
+
+            a {
+                text-decoration: none;
+                img {
+                    display: inline-block;
+                    width: 100%;
+                }
+                span {
+                    display: inline-block;
+                    text-align: center;
+                    font-weight: bold;
+                    color: #3f3d3e;
+                    margin-top: 15px;
+                    font-size: 20px;
+                    width: 100%;
+                }
+                p {
+                    font-size: 14px;
+                    color: #969696;
+                    line-height: 1.5;
+                }
+            }
+            
+            &:nth-child(3n+0) {
+                margin-right: 0;
+            }
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.post {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    h1 {
+        font-size: 4em;
+        margin-bottom: 80px;
+        color: #3b3b3b;
+    }
 
     img {
-        border-radius: 100px;
-        border: solid 4px #cdcdcd;
-        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 80px;
     }
-    h1 {
-        color: #000;
-        margin-bottom: 30px;
-        font-size: 55px;
-    }
-    h5 {
-        color: #7b7b7b;
-        margin-bottom: 40px;
-        font-size: 18px;
-    }
-    & + .fixed-container {
-        padding: 80px 0;
-    }
+
 }
 
-.fixed-container {
-    max-width: 700px;
-    margin: 0 auto;
-    p {
-        font-size: 20px;
-        line-height: 36px;
-        color: #3b3b3b;
-        text-align: justify;
-        
-        &.message {
-            display: none;
-            background: #66bb6a;
-            text-align: center;
-            color: #fff;
-            padding: 20px 0;
-        }
-    }
+p {
+    font-size: 20px;
+    color: #3b3b3b;
+    line-height: 36px;
+    text-align: justify;
     a {
         border-bottom: 2px solid rgba(0, 0, 0, .4);
         color: #3b3b3b;
@@ -84,15 +211,52 @@ header {
             border-bottom: 2px solid rgba(0, 0, 0, .1);
         }
     }
-    a.back {
-        font-size: 35px;
-        border: none;
-        color: #A2A2A2;
-        padding: 0 .75rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
     }
-    &.box-center {
-        height: 100%;
-        display: flex;
-        align-items: center;
+    .home-card {
+        .about {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .home-card {
+        .profile {
+            width: 40%;
+        }
+        .info {
+            width: 59%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .home-card {
+        margin-top: 30px;
+        .profile {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 30px;
+            img {
+                margin-left: 15%;
+            }
+        }
+        .info {
+            margin-top: 30px;
+            width: 100%;
+            h1, h4, span {
+                text-align: center;
+            }
+            .networks {
+                text-align: center;
+            }
+        }
     }
 }

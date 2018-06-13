@@ -1,0 +1,14 @@
+<nav>
+    <div class="container">
+        <ul class="right">
+            <li><a href="/" {% if page.active == 'home' %} class="active" {% endif %} >Home</a></li>
+
+            {% if site.posts.size > 0 %}
+            <li><a href="/posts" {% if page.active == 'posts' %} class="active" {% endif %} >Posts</a></li>
+            {% endif %}
+
+            {% comment %} <li><a href="#">Projects</a></li> {% endcomment %}
+            <li><a href="/contact" {% if page.active == 'contact' %} class="active" {% endif %} >Contact</a></li>
+        </ul>
+    </div>
+</nav>
